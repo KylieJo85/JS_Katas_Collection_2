@@ -3,24 +3,38 @@ function add(a, b) {
 }
 console.log(add(3, 3))
 
-let multiply=3
 
-for ( let index=3; index<=3 ;index++){
-    multiply=  index + index + index;
+
+function multiply(a, b) {
+
+    let c = 0
+    for (let index = 0; index < b; index++) {
+        c = add(a, c)
+
+    }
+    return c
 }
-console.log ((multiply ))
+console.log(multiply(3, 5))
 
-let power= 3
 
-for ( let index=0; index<=3; index++){
-    power= power + power + power +index
-    console.log ((power))
+
+function power(a, b) {
+    let d = 1
+    for (let index = 0; index < b; index++) {
+        d = multiply(a, d)
+    }
+    return d
 }
 
-let factorial= 4
+console.log(power(3, 4))
 
-for ( let index =0-1; index >=1; index--){
-factorial= index + index
-console.log ((factorial))
+
+
+function factorial(a, b) {
+    let f = 0
+    for (let index = 0; index < b; index++) {
+        f = power(a, f)
+    }
+    return f
 }
-
+console.log (factorial(4,3))
